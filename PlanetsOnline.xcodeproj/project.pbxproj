@@ -12,6 +12,8 @@
 		0ECBB4641F1E2731007A5EEC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0ECBB4621F1E2731007A5EEC /* Main.storyboard */; };
 		0ECBB4661F1E2731007A5EEC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0ECBB4651F1E2731007A5EEC /* Assets.xcassets */; };
 		0ECBB4691F1E2731007A5EEC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0ECBB4671F1E2731007A5EEC /* LaunchScreen.storyboard */; };
+		0ECBB4711F1E2920007A5EEC /* PlanetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ECBB4701F1E2920007A5EEC /* PlanetTableViewCell.swift */; };
+		0ECBB4731F1E298B007A5EEC /* Planet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ECBB4721F1E298B007A5EEC /* Planet.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		0ECBB4651F1E2731007A5EEC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0ECBB4681F1E2731007A5EEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0ECBB46A1F1E2731007A5EEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0ECBB4701F1E2920007A5EEC /* PlanetTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlanetTableViewCell.swift; path = ../PlanetTableViewCell.swift; sourceTree = "<group>"; };
+		0ECBB4721F1E298B007A5EEC /* Planet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Planet.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,7 +59,9 @@
 			isa = PBXGroup;
 			children = (
 				0ECBB45E1F1E2731007A5EEC /* AppDelegate.swift */,
+				0ECBB4701F1E2920007A5EEC /* PlanetTableViewCell.swift */,
 				0ECBB4601F1E2731007A5EEC /* ViewController.swift */,
+				0ECBB4721F1E298B007A5EEC /* Planet.swift */,
 				0ECBB4621F1E2731007A5EEC /* Main.storyboard */,
 				0ECBB4651F1E2731007A5EEC /* Assets.xcassets */,
 				0ECBB4671F1E2731007A5EEC /* LaunchScreen.storyboard */,
@@ -139,6 +145,8 @@
 			files = (
 				0ECBB4611F1E2731007A5EEC /* ViewController.swift in Sources */,
 				0ECBB45F1F1E2731007A5EEC /* AppDelegate.swift in Sources */,
+				0ECBB4711F1E2920007A5EEC /* PlanetTableViewCell.swift in Sources */,
+				0ECBB4731F1E298B007A5EEC /* Planet.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
