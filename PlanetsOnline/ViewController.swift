@@ -25,10 +25,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         DispatchQueue.global().async {
             for name in self.planetsStrings {
                 var urlString: String = ""
-                urlString += self.stringOfURL
-                urlString += name
-                urlString += ".png"
-                print(urlString)
+                urlString += self.stringOfURL + name + ".png"
                 let data = try? Data(contentsOf: URL(string: urlString)!)
                 self.planets.append(Planet(name: name.capitalized, image: data ?? nil))
                 DispatchQueue.main.async {
