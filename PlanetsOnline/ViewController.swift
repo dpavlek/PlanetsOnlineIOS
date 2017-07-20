@@ -17,6 +17,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     var planets = [Planet]()
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         
         planetTable.delegate = self
@@ -26,14 +27,15 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             for name in self.planetsStrings {
                 var urlString: String = ""
                 urlString += self.stringOfURL + name + ".png"
-                let data = try? Data(contentsOf: URL(string: urlString)!)
-                self.planets.append(Planet(name: name.capitalized, image: data ?? nil))
+                if let imageURL = URL(string: urlString) {
+                    let data = try? Data(contentsOf: imageURL)
+                    self.planets.append(Planet(name: name.capitalized, image: data ?? nil))
+                }
                 DispatchQueue.main.async {
                     self.planetTable.reloadData()
                 }
             }
         }
-        print(planets)
         // Do any additional setup after loading the view, typically from a nib.
     }
     
@@ -47,11 +49,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "planetCell", for: indexPath) as? PlanetTableViewCell else {
             fatalError("Cell is not PlanetTableViewCell")
         }
+        
         cell.planetLabel?.text = planets[indexPath.row].name
-        cell.planetImage?.image = UIImage(data: planets[indexPath.row].image!)
+        cell.planetImage?.image = UIImage(data: planets[indexPath.row].image!) ?? nil
+        
         return cell
     }
     
